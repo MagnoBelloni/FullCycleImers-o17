@@ -68,4 +68,28 @@ export class OrdersService {
       }
     );
   }
+
+  async pay(id: string) {
+    const order = await this.orderRepo.findOneByOrFail({
+      id
+    });
+
+    order.pay();
+
+    await this.orderRepo.save(order);
+
+    return order;
+  }
+
+  async cancel(id: string) {
+    const order = await this.orderRepo.findOneByOrFail({
+      id
+    });
+
+    order.fail();
+
+    await this.orderRepo.save(order);
+
+    return order;
+  }
 }
