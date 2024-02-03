@@ -1,0 +1,49 @@
+GET http://localhost:3000/products
+
+###
+POST http://localhost:3000/products
+Content-Type: application/json
+
+{   
+    "name": "Produtinho ",
+    "description": "Produtinho 1 desc",
+    "image_url": "https://via.placeholder.com/150",
+    "price": 100
+}
+
+###
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "username": "chris",
+    "password": "chris"
+}
+
+###
+GET http://localhost:3000/orders
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsInVzZXJuYW1lIjoiY2hyaXMiLCJpYXQiOjE3MDY5ODI3NzQsImV4cCI6MTcwNzA2OTE3NH0.RvJD1jAKgeTD7g3zy3swe854Jy2xZdWOBUNl__bO7WA
+
+###
+GET http://localhost:3000/orders/487e64e8-de38-4410-b21a-48cbdeb5970c
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsInVzZXJuYW1lIjoiY2hyaXMiLCJpYXQiOjE3MDY5ODI3NzQsImV4cCI6MTcwNzA2OTE3NH0.RvJD1jAKgeTD7g3zy3swe854Jy2xZdWOBUNl__bO7WA
+
+###
+POST http://localhost:3000/orders
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsInVzZXJuYW1lIjoiY2hyaXMiLCJpYXQiOjE3MDY5ODI3NzQsImV4cCI6MTcwNzA2OTE3NH0.RvJD1jAKgeTD7g3zy3swe854Jy2xZdWOBUNl__bO7WA
+
+{   
+    "items":[
+        {
+            "product_id": "04c4353a-3f6d-4272-a8f2-44b82c05ecc0",
+            "quantity": 1
+        },
+        {
+            "product_id": "121829b9-e9f9-4ca9-bd14-b087afedd587",
+            "quantity": 1
+        }
+    ],
+    "card_hash": "123"
+}
+
