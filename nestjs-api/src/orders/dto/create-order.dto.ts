@@ -1,7 +1,6 @@
 import { Type } from 'class-transformer';
 import { IsInt } from 'class-validator';
 import { IsPositive } from 'class-validator';
-import { isNotEmpty } from 'class-validator';
 import {
     ArrayNotEmpty,
     IsNotEmpty,
